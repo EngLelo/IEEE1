@@ -1,0 +1,98 @@
+#task1: 
+
+ Mark down all the Valid boolean expression in python:
+A) n > 100 and < 500
+B) n > 100 and n < 500
+C) 100 < n < 500
+
+#Answer
+A = False {type:"boolean"} 
+B = True  {type:"boolean"} 
+C = True  {type:"boolean"} 
+
+______________________________________________________________
+#task2:
+
+Fill the gaps to get the ouput as in the example below:
+(For any string greater than 3 characters)
+ **Input**: "globalization" 
+ **Output**: g11n
+**Input**: "subjective" 
+**Output**: s8e
+
+#Answer
+s = input()
+if len(s) > 3:
+    print(s[0] + str(len(s)-2) + s[-1])
+else:
+    print(s)
+_________________________
+#task3:
+
+Create a tuple of 10 elements and then multiply each element of the tuple by 2 & save the results in a list
+
+#Answer
+my_tuple = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+new_tuple = tuple(x * 2 for x in my_tuple)
+my_list = list(new_tuple)
+print(my_list)
+___________________________
+#task4:
+
+Reverse the string 'Mansoura' using slicing
+
+#Answer
+s = "Mansoura"
+reversed_s = s[::-1]
+print(reversed_s)
+_________________________________
+#task5:
+
+Use List Comprehension to create a list of the first letters of every word in the string below:
+
+ st = 'Friendship is the tree of its seeds tender'
+ 
+ #Answer
+st = 'Friendship is the tree of its seeds tender'
+mylist = [x[0].upper() for x in st.split()]
+print(mylist)
+ __________________________
+#problem1
+You are given a string. Split the string on a " " (space) delimiter and join using a - hyphen.
+
+#Answer
+x = "this is a string"
+result = "-".join(x.split())
+print(result)
+_____________________________
+#problem2
+Given an integer , n , perform the following conditional actions:
+
+If n is odd, print Weird
+If n is even and in the inclusive range of 2 to 5 , print Not Weird
+If n is even and in the inclusive range of 6 to 20 , print Weird
+If n is even and greater than 20 , print Not Weird
+
+#Answer
+n = int(input().strip())
+
+if n % 2 != 0:
+    print("Weird")
+elif n in range(2, 6):
+    print("Not Weird")
+elif n in range(6, 21):
+    print("Weird")
+else:
+    print("Not Weird")
+_________________________________
+#problem3
+Given 4 numbers A, B, C and D. Print the last 2 digits from their Multiplication.
+Input
+Only one line containing four numbers A, B, C and D (2≤A,B,C,D≤10^9).
+Output
+Print the last 2 digits from their Multiplication.
+
+#Answer
+a, b, c, d = map(int, input().split())
+result = (a * b * c * d) % 100
+print(result)
